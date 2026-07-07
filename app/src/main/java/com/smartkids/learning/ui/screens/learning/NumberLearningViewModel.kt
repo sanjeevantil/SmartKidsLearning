@@ -7,6 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.asStateFlow
 
 data class NumberLearningState(val items: List<NumberItem> = emptyList(), val currentIndex: Int = 0, val showCount: Boolean = false)
 

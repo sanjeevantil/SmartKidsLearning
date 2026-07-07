@@ -26,8 +26,8 @@ fun ColorLearningScreen(viewModel: ColorLearningViewModel, onNavigateBack: () ->
     Scaffold(topBar = { TopAppBar(title = { Text("Colors") }, navigationIcon = { IconButton(onClick = onNavigateBack) { Icon(Icons.Default.ArrowBack, null) } }, colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background)) }) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
             AnimatedContent(targetState = item.name) {
-                Box(modifier = Modifier.size(200.dp).clip(CircleShape()).background(color.copy(alpha = 0.3f)), contentAlignment = Alignment.Center) {
-                    Box(modifier = Modifier.size(120.dp).clip(CircleShape()).background(color))
+                Box(modifier = Modifier.size(200.dp).clip(CircleShape).background(color.copy(alpha = 0.3f)), contentAlignment = Alignment.Center) {
+                    Box(modifier = Modifier.size(120.dp).clip(CircleShape).background(color))
                 }
             }
             Spacer(modifier = Modifier.height(20.dp))
@@ -40,9 +40,9 @@ fun ColorLearningScreen(viewModel: ColorLearningViewModel, onNavigateBack: () ->
             }
             Spacer(modifier = Modifier.height(32.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                IconButton(onClick = { viewModel.prev() }, enabled = state.currentIndex > 0, modifier = Modifier.size(60.dp).clip(CircleShape()).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(28.dp)) }
+                IconButton(onClick = { viewModel.prev() }, enabled = state.currentIndex > 0, modifier = Modifier.size(60.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(28.dp)) }
                 Button(onClick = { viewModel.toggleExample() }, shape = RoundedCornerShape(16.dp), colors = ButtonDefaults.buttonColors(containerColor = color)) { Text(if (state.showExample) "Hide" else "Example", color = Color.White) }
-                IconButton(onClick = { viewModel.next() }, enabled = state.currentIndex < state.items.size - 1, modifier = Modifier.size(60.dp).clip(CircleShape()).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(28.dp)) }
+                IconButton(onClick = { viewModel.next() }, enabled = state.currentIndex < state.items.size - 1, modifier = Modifier.size(60.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(28.dp)) }
             }
         }
     }

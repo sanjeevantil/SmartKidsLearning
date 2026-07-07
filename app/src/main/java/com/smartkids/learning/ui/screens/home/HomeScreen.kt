@@ -26,6 +26,9 @@ import com.smartkids.learning.domain.model.UserProfile
 import com.smartkids.learning.ui.components.*
 import com.smartkids.learning.util.HapticFeedback
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.compose.foundation.background
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.vector.ImageVector
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -250,10 +253,11 @@ fun CategoryChip(name: String, categoryId: String, onClick: () -> Unit) {
         colors = FilterChipDefaults.filterChipColors(
             selectedContainerColor = color,
             containerColor = color.copy(alpha = 0.1f),
-            selectedContentColor = Color.White,
-            selectedLabelContentColor = Color.White
+            selectedLabelColor = Color.White
         ),
         border = FilterChipDefaults.filterChipBorder(
+            enabled = true,
+            selected = false,
             borderColor = color.copy(alpha = 0.3f),
             selectedBorderColor = color
         )

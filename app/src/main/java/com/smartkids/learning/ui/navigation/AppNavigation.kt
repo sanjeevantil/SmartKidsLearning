@@ -45,8 +45,6 @@ import com.smartkids.learning.ui.screens.profile.ProfileScreen
 import com.smartkids.learning.ui.screens.profile.ProfileViewModel
 import com.smartkids.learning.ui.screens.games.MatchingGameScreen
 import com.smartkids.learning.ui.screens.games.MatchingGameViewModel
-import com.smartkids.learning.ui.screens.games.RapidQuizScreen
-import com.smartkids.learning.ui.screens.games.RapidQuizViewModel
 import com.smartkids.learning.ui.screens.games.TimedChallengeScreen
 import com.smartkids.learning.ui.screens.games.TimedChallengeViewModel
 import com.smartkids.learning.ui.screens.games.ExtraGamesViewModel
@@ -91,7 +89,8 @@ fun AppNavigation() {
                 onNavigateToAnimals = { navController.navigate(Screen.AnimalLearning.route) },
                 onNavigateToFlashCards = { topicId ->
                     navController.navigate(Screen.FlashCards.createRoute(topicId))
-                }
+                },
+                onNavigateToTracing = { navController.navigate(Screen.Tracing.route) }
             )
         }
 
@@ -150,8 +149,9 @@ fun AppNavigation() {
                 onNavigateToMemoryGame = { navController.navigate(Screen.MemoryGame.createRoute(it)) },
                 onNavigateToBalloonPop = { navController.navigate(Screen.BalloonPop.createRoute(it)) },
                 onNavigateToMatching = { navController.navigate(Screen.MatchingGame.createRoute(it)) },
-                onNavigateToRapidQuiz = { navController.navigate(Screen.RapidQuiz.createRoute(it)) },
-                onNavigateToTimedChallenge = { navController.navigate(Screen.TimedChallenge.createRoute(it)) }
+                onNavigateToRapidQuiz = { /* Removed */ },
+                onNavigateToTimedChallenge = { navController.navigate(Screen.TimedChallenge.createRoute(it)) },
+                navController = navController
             )
         }
 
@@ -191,20 +191,6 @@ fun AppNavigation() {
             val viewModel: MatchingGameViewModel = hiltViewModel()
             LaunchedEffect(topicId) { viewModel.startGame(topicId) }
             MatchingGameScreen(
-                viewModel = viewModel,
-                onNavigateBack = { navController.popBackStack() },
-                onNavigateHome = { navController.navigate(Screen.Home.route) { popUpTo(0) { inclusive = true } } }
-            )
-        }
-
-        composable(
-            route = Screen.RapidQuiz.routeWithArg,
-            arguments = listOf(navArgument("topicId") { type = NavType.StringType })
-        ) { backStackEntry ->
-            val topicId = backStackEntry.arguments?.getString("topicId") ?: "general_knowledge"
-            val viewModel: RapidQuizViewModel = hiltViewModel()
-            LaunchedEffect(topicId) { viewModel.startGame(topicId) }
-            RapidQuizScreen(
                 viewModel = viewModel,
                 onNavigateBack = { navController.popBackStack() },
                 onNavigateHome = { navController.navigate(Screen.Home.route) { popUpTo(0) { inclusive = true } } }

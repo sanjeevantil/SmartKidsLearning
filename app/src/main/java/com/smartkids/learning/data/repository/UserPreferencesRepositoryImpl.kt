@@ -94,14 +94,14 @@ class UserPreferencesRepositoryImpl @Inject constructor(
         val today = dateFormat.format(Date())
         val last = dataStore.lastActiveDate.first()
         when {
-            last.isEmpty() -> {
+            last.isNullOrEmpty() -> {
                 dataStore.incrementStreak()
             }
             last == today -> {
             }
             else -> {
                 try {
-                    val lastD = dateFormat.parse(last)
+                    val lastD = last?.let { dateFormat.parse(it) }
                     val todayD = dateFormat.parse(today)
                     val diff = ((todayD?.time ?: 0) - (lastD?.time ?: 0)) / (24 * 60 * 60 * 1000)
                     if (diff == 1L) {

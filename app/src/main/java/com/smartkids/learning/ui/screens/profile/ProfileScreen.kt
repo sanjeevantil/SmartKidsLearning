@@ -16,6 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.background
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,7 +31,7 @@ fun ProfileScreen(viewModel: ProfileViewModel, onNavigateBack: () -> Unit) {
 
     Scaffold(topBar = { TopAppBar(title = { Text("Profile") }, navigationIcon = { IconButton(onClick = onNavigateBack) { Icon(Icons.Default.ArrowBack, null) } }, actions = { IconButton(onClick = { isEditing = !isEditing }) { Icon(if (isEditing) Icons.Default.Check else Icons.Default.Edit, null) } }, colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background)) }) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-            Box(modifier = Modifier.size(120.dp).clip(CircleShape()).background(Color(0xFFFF6B35).copy(alpha = 0.15f)), contentAlignment = Alignment.Center) {
+            Box(modifier = Modifier.size(120.dp).clip(CircleShape).background(Color(0xFFFF6B35).copy(alpha = 0.15f)), contentAlignment = Alignment.Center) {
                 Text(avatars[avatar % avatars.size], fontSize = 56.sp)
             }
             Spacer(modifier = Modifier.height(8.dp))

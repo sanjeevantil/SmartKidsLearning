@@ -155,7 +155,7 @@ object ExtraLearningData {
 data class TimeLearningItem(val time: String, val spokenForm: String, val description: String)
 data class CalendarLearningItem(val term: String, val meaning: String, val example: String)
 data class MapItem(val name: String, val definition: String, val example: String)
-data class HindiItem(varnam: String, val sound: String, val exampleWord: String, val exampleWords: List<String>)
+data class HindiItem(val varnam: String, val sound: String, val exampleWord: String, val exampleWords: List<String>)
 data class SpeakingItem(val sentence: String, val instruction: String, val example: String)
 data class ListeningItem(val sentence: String, val keyWord: String, val question: String, val options: List<String>)
 data class ReadingItem(val sentence: String, val keyWords: String, val difficulty: Int)

@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.background
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -24,7 +25,7 @@ fun ShapeLearningScreen(viewModel: ShapeLearningViewModel, onNavigateBack: () ->
     Scaffold(topBar = { TopAppBar(title = { Text("Shapes") }, navigationIcon = { IconButton(onClick = onNavigateBack) { Icon(Icons.Default.ArrowBack, null) } }, colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background)) }) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
             AnimatedContent(targetState = item.name) {
-                Box(modifier = Modifier.size(180.dp).clip(CircleShape()).background(Color(0xFF7B2FF7).copy(alpha = 0.12f)), contentAlignment = Alignment.Center) {
+                Box(modifier = Modifier.size(180.dp).clip(CircleShape).background(Color(0xFF7B2FF7).copy(alpha = 0.12f)), contentAlignment = Alignment.Center) {
                     Icon(Icons.Default.Category, contentDescription = item.name, tint = Color(0xFF7B2FF7), modifier = Modifier.size(80.dp))
                 }
             }
@@ -40,9 +41,9 @@ fun ShapeLearningScreen(viewModel: ShapeLearningViewModel, onNavigateBack: () ->
             }
             Spacer(modifier = Modifier.height(32.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                IconButton(onClick = { viewModel.prev() }, enabled = state.currentIndex > 0, modifier = Modifier.size(60.dp).clip(CircleShape()).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(28.dp)) }
+                IconButton(onClick = { viewModel.prev() }, enabled = state.currentIndex > 0, modifier = Modifier.size(60.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(28.dp)) }
                 Button(onClick = { viewModel.toggleInfo() }, shape = RoundedCornerShape(16.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7B2FF7))) { Text(if (state.showInfo) "Hide" else "Info") }
-                IconButton(onClick = { viewModel.next() }, enabled = state.currentIndex < state.items.size - 1, modifier = Modifier.size(60.dp).clip(CircleShape()).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(28.dp)) }
+                IconButton(onClick = { viewModel.next() }, enabled = state.currentIndex < state.items.size - 1, modifier = Modifier.size(60.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(28.dp)) }
             }
         }
     }

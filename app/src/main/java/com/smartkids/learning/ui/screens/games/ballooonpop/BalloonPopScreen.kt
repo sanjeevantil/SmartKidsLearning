@@ -137,7 +137,7 @@ fun BalloonPopScreen(
                 }
             }
 
-            if (state.showFeedback) {
+            if (state.showRoundResult) {
                 Surface(
                     shape = RoundedCornerShape(16.dp),
                     color = if (state.roundCorrect > 0) Color(0xFF06D6A0).copy(alpha = 0.2f)

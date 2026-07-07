@@ -7,6 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.asStateFlow
 
 data class ShapeLearningState(val items: List<ShapeItem> = emptyList(), val currentIndex: Int = 0, val showInfo: Boolean = false)
 

@@ -10,6 +10,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlinx.coroutines.flow.asStateFlow
 
 data class MemoryCard(val id: String, val label: String, val pairId: Int)
 
@@ -40,8 +41,8 @@ class MemoryGameViewModel @Inject constructor(
         viewModelScope.launch {
             val pairs = getPairsForTopic(topicId).take(8)
             val cards = pairs.flatMap { pair ->
-                listOf(MemoryCard("${pair.first}_${System.nanoTime()}", pair.first, pair.second),
-                       MemoryCard("${pair.second}_${System.nanoTime()}", pair.second, pair.second))
+                listOf(MemoryCard("${pair.first}_1", pair.first, pair.second),
+                       MemoryCard("${pair.first}_2", pair.first, pair.second))
             }.shuffled()
             _state.update { it.copy(cards = cards, topicId = topicId, isLoading = false) }
         }

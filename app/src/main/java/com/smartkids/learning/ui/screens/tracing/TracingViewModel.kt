@@ -6,6 +6,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.asStateFlow
 
 data class TracingState(val currentIndex: Int = 0, val isComplete: Boolean = false, val showGuide: Boolean = true)
 

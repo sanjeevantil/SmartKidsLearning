@@ -128,7 +128,7 @@ fun TopicCard(
 
         Box(
             modifier = Modifier
-                .align(Alignment.TopEnd)
+                .align(Alignment.End)
                 .padding(8.dp)
                 .size(8.dp)
                 .clip(CircleShape)
@@ -150,7 +150,7 @@ fun getIconForTopic(iconName: String): ImageVector {
         "crop_square" -> Icons.Default.CropSquare
         "category" -> Icons.Default.Category
         "palette" -> Icons.Default.Palette
-        "apple" -> Icons.Default.Apple
+        "apple" -> Icons.Default.Star
         "eco" -> Icons.Default.Eco
         "pets" -> Icons.Default.Pets
         "flutter_dash" -> Icons.Default.FlutterDash

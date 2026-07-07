@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.background
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -27,7 +28,7 @@ fun AnimalLearningScreen(viewModel: AnimalLearningViewModel, onNavigateBack: () 
             Text("${state.currentIndex + 1}/${state.items.size}", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Spacer(modifier = Modifier.height(12.dp))
             AnimatedContent(targetState = item.name) {
-                Box(modifier = Modifier.size(180.dp).clip(CircleShape()).background(Color(0xFFFF9F1C).copy(alpha = 0.12f)), contentAlignment = Alignment.Center) {
+                Box(modifier = Modifier.size(180.dp).clip(CircleShape).background(Color(0xFFFF9F1C).copy(alpha = 0.12f)), contentAlignment = Alignment.Center) {
                     Text(emojis[item.name] ?: "\uD83D\uDC3E", fontSize = 72.sp)
                 }
             }
@@ -43,9 +44,9 @@ fun AnimalLearningScreen(viewModel: AnimalLearningViewModel, onNavigateBack: () 
             }
             Spacer(modifier = Modifier.height(24.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                IconButton(onClick = { viewModel.prev() }, enabled = state.currentIndex > 0, modifier = Modifier.size(60.dp).clip(CircleShape()).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(28.dp)) }
+                IconButton(onClick = { viewModel.prev() }, enabled = state.currentIndex > 0, modifier = Modifier.size(60.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowBack, null, modifier = Modifier.size(28.dp)) }
                 Button(onClick = { viewModel.toggleDetails() }, shape = RoundedCornerShape(16.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF9F1C))) { Text(if (state.showDetails) "Hide" else "Details") }
-                IconButton(onClick = { viewModel.next() }, enabled = state.currentIndex < state.items.size - 1, modifier = Modifier.size(60.dp).clip(CircleShape()).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(28.dp)) }
+                IconButton(onClick = { viewModel.next() }, enabled = state.currentIndex < state.items.size - 1, modifier = Modifier.size(60.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primaryContainer)) { Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(28.dp)) }
             }
         }
     }

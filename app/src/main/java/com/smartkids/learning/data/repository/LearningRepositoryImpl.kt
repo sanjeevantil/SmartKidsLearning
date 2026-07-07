@@ -6,6 +6,7 @@ import com.smartkids.learning.data.local.datastore.UserPreferencesDataStore
 import com.smartkids.learning.domain.model.LearningProgress
 import com.smartkids.learning.domain.repository.LearningRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -65,7 +66,7 @@ class LearningRepositoryImpl @Inject constructor(
         timeSpent: Long,
         difficulty: Int
     ): LearningProgress {
-        val existing = dao.getProgressByTopic(topicId)
+        val existing = dao.getProgressByTopic(topicId).firstOrNull()
         val updated = if (existing != null) {
             val newCorrect = existing.correctAnswers + correct
             val newWrong = existing.wrongAnswers + wrong
@@ -126,7 +127,7 @@ class LearningRepositoryImpl @Inject constructor(
         categoryId: String,
         totalItems: Int
     ) {
-        val existing = dao.getProgressByTopic(topicId)
+        val existing = dao.getProgressByTopic(topicId).firstOrNull()
         if (existing == null) {
             dao.upsertProgress(
                 LearningProgressEntity(

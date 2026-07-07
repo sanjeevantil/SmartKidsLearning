@@ -9,7 +9,7 @@ import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.drawscope.drawRect
+
 import kotlinx.coroutines.delay
 import kotlin.random.Random
 
@@ -46,7 +46,7 @@ fun ConfettiEffect(
     LaunchedEffect(show) {
         anim.animateTo(
             targetValue = 1f,
-            animationSpec = tween(durationMillis, easing = LinearOutSlowInEasing)
+            animationSpec = tween(durationMillis.toInt(), easing = LinearOutSlowInEasing)
         )
     }
 

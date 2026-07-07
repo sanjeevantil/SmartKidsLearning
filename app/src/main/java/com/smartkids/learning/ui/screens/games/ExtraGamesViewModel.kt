@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import kotlin.random.Random
+import kotlinx.coroutines.flow.asStateFlow
 
 // ==================== DRAG & DROP ====================
 data class DragDropState(val items: List<DragDropItem> = emptyList(), val targets: List<String> = emptyList(), val draggedIndex: Int? = null, val matchedCount: Int = 0, val totalPairs: Int = 0, val score: Int = 0, val isComplete: Boolean = false, val isLoading: Boolean = true, val xpEarned: Int = 0, val coinsEarned: Int = 0, val topicId: String = "")

@@ -9,6 +9,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlinx.coroutines.flow.asStateFlow
 
 data class BalloonItem(val id: Int, val label: String, val isCorrect: Boolean, val offsetX: Float, val offsetY: Float, val color: Long)
 
@@ -84,7 +85,7 @@ class BalloonPopViewModel @Inject constructor(
             _state.update { it.copy(balloons = newBalloons, score = it.score + 10, correctPopped = it.correctPopped + 1) }
         } else {
             roundWrongCount++
-            _state.update { it.copy(balloons = newBalloons, wrongCount = it.wrongCount + 1) }
+            _state.update { it.copy(balloons = newBalloons) }
         }
         _state.update { it.copy(totalPopped = it.totalPopped + 1) }
         if (newBalloons.isEmpty() || roundCorrectCount >= 1) {
