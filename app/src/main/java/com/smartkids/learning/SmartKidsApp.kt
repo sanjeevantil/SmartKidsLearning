@@ -9,6 +9,8 @@ import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.io.PrintWriter
+import java.io.StringWriter
 import javax.inject.Inject
 
 @HiltAndroidApp
@@ -19,8 +21,23 @@ class SmartKidsApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        setupCrashHandler()
         createNotificationChannels()
         seedData()
+    }
+
+    private fun setupCrashHandler() {
+        val defaultHandler = Thread.getDefaultUncaughtExceptionHandler()
+        Thread.setDefaultUncaughtExceptionHandler { thread, exception ->
+            val sw = StringWriter()
+            exception.printStackTrace(PrintWriter(sw))
+            val stackTrace = sw.toString()
+            
+            CrashActivity.start(this, stackTrace)
+            
+            defaultHandler?.uncaughtException(thread, exception)
+            kotlin.system.exitProcess(1)
+        }
     }
 
     private fun seedData() {
