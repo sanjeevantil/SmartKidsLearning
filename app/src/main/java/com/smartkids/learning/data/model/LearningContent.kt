@@ -3,9 +3,10 @@ package com.smartkids.learning.data.model
 data class ABCItem(
     val letter: String,
     val word: String,
-    val phonetic: String = "",
-    fun ABCItem.exampleSentence(): String = "A is for $word"
-)
+    val phonetic: String = ""
+) {
+    fun exampleSentence(): String = "A is for $word"
+}
 
 data class NumberItem(
     val number: Int,

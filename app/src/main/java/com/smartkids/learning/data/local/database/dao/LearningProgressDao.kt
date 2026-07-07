@@ -17,7 +17,7 @@ interface LearningProgressDao {
     @Query("SELECT * FROM learning_progress WHERE topicId = :topicId")
     fun getProgressByTopic(topicId: String): Flow<LearningProgressEntity?>
 
-    @Query("SELECT * FROM learning_progress WHERE categoryId = :categoryId ORDER BY sortOrder ASC")
+    @Query("SELECT * FROM learning_progress WHERE categoryId = :categoryId ORDER BY topicName ASC")
     fun getProgressByCategory(categoryId: String): Flow<List<LearningProgressEntity>>
 
     @Query("SELECT * FROM learning_progress WHERE isCompleted = 0 ORDER BY lastAccessedTimestamp DESC LIMIT 1")
