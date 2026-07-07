@@ -28,7 +28,15 @@ jobs:
         gradle-version: '8.9'
 
     - name: Build Debug APK
-      run: gradle assembleDebug
+      run: |
+        gradle assembleDebug > build_log.txt 2>&1 || {
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add build_log.txt
+          git commit -m "Upload build log"
+          git push
+          exit 1
+        }
 
     - name: Upload APK to Release
       uses: softprops/action-gh-release@v2
