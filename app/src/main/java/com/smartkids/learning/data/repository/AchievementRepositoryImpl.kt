@@ -67,7 +67,7 @@ class AchievementRepositoryImpl @Inject constructor(
 
     override suspend fun seedAchievements() {
         val existing = dao.getAllAchievements()
-        if (existing.isNotEmpty()) return
+        if (kotlinx.coroutines.flow.firstOrNull(existing)?.isNotEmpty() == true) return
         dao.insertAchievements(getAllAchievementsDefinitions())
     }
 

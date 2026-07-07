@@ -85,16 +85,15 @@ class DailyChallengeRepositoryImpl @Inject constructor(
     }
 
     private fun DailyChallengeEntity.toDomain() = DailyChallenge(
-        challengeId = dateStamp + "_" + topicId,
-        date = dateFormat.parse(dateStamp)?.time ?: 0L,
-        title = challengeTopics.find { it.first == topicId }?.second ?: topicId,
-        description = "Complete $challengeType challenge",
-        type = challengeType,
-        requirementCount = 5 + difficulty * 2,
-        currentProgress = score,
+        dateStamp = dateStamp,
+        challengeType = challengeType,
+        topicId = topicId,
+        topicName = challengeTopics.find { it.first == topicId }?.second ?: topicId,
+        difficulty = difficulty,
+        totalQuestions = 5 + difficulty * 2,
         isCompleted = isCompleted,
+        score = score,
         xpReward = xpEarned,
-        coinReward = coinEarned,
-        categoryId = null
+        coinReward = coinEarned
     )
 }

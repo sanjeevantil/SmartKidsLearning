@@ -273,7 +273,7 @@ class ExtraGamesViewModel @Inject constructor(
         val s = _wordBuilder.value
         if (s.builtWord.isEmpty()) return
         val lastChar = s.builtWord.last()
-        val newLetters = s.availableLetters.map { if (it.char == lastChar && it.used) it.copy(used = false) else it }
+        val newLetters = s.availableLetters.map { if (it.char == lastChar.toString() && it.used) it.copy(used = false) else it }
         _wordBuilder.value = s.copy(availableLetters = newLetters, builtWord = s.builtWord.dropLast(1))
     }
 
@@ -374,7 +374,7 @@ class ExtraGamesViewModel @Inject constructor(
         val s = _spotDiff.value; if (s.found || s.showRoundResult) return
         if (grid == "right" && pos == s.diffPosition) {
             soundManager.playCorrect(); haptic.success()
-            _spotDiff.value = s.copy(found = true, score = s.score + 25, showRoundResult = true, roundCorrect = true)
+            _spotDiff.value = s.copy(found = true, score = s.score + 25, showRoundResult = true)
             viewModelScope.launch {
                 delay(1000)
                 val nextRound = s.round + 1

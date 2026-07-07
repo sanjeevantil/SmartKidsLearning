@@ -23,6 +23,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.drawText
+import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.text.TextStyle
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -41,6 +45,7 @@ fun TracingScreen(viewModel: TracingViewModel, onNavigateBack: () -> Unit) {
                 TextButton(onClick = { viewModel.toggleGuide() }) { Text(if (state.showGuide) "Hide Guide" else "Show Guide") }
                 TextButton(onClick = { path.value = Path(); viewModel.markComplete() }) { Text("Clear") }
             }
+            val textMeasurer = rememberTextMeasurer()
             Box(modifier = Modifier.size(300.dp).padding(8.dp), contentAlignment = Alignment.Center) {
                 Canvas(modifier = Modifier.fillMaxSize().pointerInput(item.letter) {
                     detectDragGestures { change, _ ->
@@ -50,9 +55,8 @@ fun TracingScreen(viewModel: TracingViewModel, onNavigateBack: () -> Unit) {
                     }
                 }) {
                     val fontSize = size.minDimension * 0.7f
-                    val textStyle = androidx.compose.ui.text.TextMeasurer()
                     if (state.showGuide) {
-                        drawText(textStyle.measure(item.letter, androidx.compose.ui.text.TextStyle(fontSize = fontSize.sp, fontWeight = FontWeight.Bold, color = guideColor)), topLeft = Offset((size.width - fontSize) / 2, (size.height - fontSize) / 2))
+                        drawText(textMeasurer.measure(item.letter, TextStyle(fontSize = fontSize.sp, fontWeight = FontWeight.Bold, color = guideColor)), topLeft = Offset((size.width - fontSize) / 2, (size.height - fontSize) / 2))
                     }
                     drawPath(path.value, color = strokeColor, style = Stroke(width = 12.dp.toPx(), cap = StrokeCap.Round))
                 }

@@ -63,9 +63,7 @@ fun XPBar(
                 .fillMaxWidth()
                 .height(10.dp)
                 .clip(RoundedCornerShape(5.dp)),
-            color = Brush.horizontalGradient(
-                listOf(Color(0xFF7B2FF7), Color(0xFFB06CFF))
-            ),
+            color = Color(0xFF7B2FF7),
             trackColor = Color(0xFF7B2FF7).copy(alpha = 0.15f),
         )
     }

@@ -25,7 +25,7 @@ fun Modifier.bounceClick(
         indication = null,
         onClick = {
             scope.launch {
-                launch { scale.animateTo(scaleDown, spring(stiffness = Spring.StiffnessMediumHigh)) }
+                launch { scale.animateTo(scaleDown, spring(stiffness = Spring.StiffnessMedium)) }
                 onClick()
                 launch { scale.animateTo(1f, spring(stiffness = Spring.StiffnessMediumLow)) }
             }
@@ -40,7 +40,7 @@ fun String.capitalizeWords(): String {
     return split(" ").joinToString(" ") { it.replaceFirstChar { c -> c.uppercase() } }
 }
 
-fun Int.formatTime(): String {
+fun Long.formatTime(): String {
     val hours = this / 3600
     val minutes = (this % 3600) / 60
     return when {
