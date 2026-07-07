@@ -83,8 +83,18 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     testImplementation(libs.junit)
+    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("com.google.dagger:hilt-android-testing:2.53.1")
+    testImplementation("androidx.test.ext:junit:1.2.1")
+    testImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    kspTest("com.google.dagger:hilt-android-compiler:2.53.1")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
+}
+
+tasks.withType<Test> {
+    useJUnit()
+    systemProperty("robolectric.logging", "stdout")
 }

@@ -27,9 +27,20 @@ jobs:
       with:
         gradle-version: '8.9'
 
+    - name: Run Tests (Robolectric)
+      run: |
+        ./gradlew testDebugUnitTest > test_log.txt 2>&1 || {
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add test_log.txt
+          git commit -m "Upload test log"
+          git push
+          exit 1
+        }
+
     - name: Build Debug APK
       run: |
-        gradle assembleDebug > build_log.txt 2>&1 || {
+        ./gradlew assembleDebug > build_log.txt 2>&1 || {
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add build_log.txt
