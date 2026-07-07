@@ -54,11 +54,11 @@ class AchievementRepositoryImpl @Inject constructor(
                     unlockedTimestamp = System.currentTimeMillis(),
                     currentValue = currentVal
                 )
-                dao.updateAchievement(unlocked.toEntity())
+                dao.updateAchievement(unlocked)
                 newlyUnlocked.add(unlocked.toDomain())
             } else {
                 dao.updateAchievement(
-                    def.copy(currentValue = currentVal).toEntity()
+                    def.copy(currentValue = currentVal)
                 )
             }
         }
@@ -68,7 +68,7 @@ class AchievementRepositoryImpl @Inject constructor(
     override suspend fun seedAchievements() {
         val existing = dao.getAllAchievements()
         if (existing.isNotEmpty()) return
-        dao.insertAchievements(getAllAchievementsDefinitions().map { it.toEntity() })
+        dao.insertAchievements(getAllAchievementsDefinitions())
     }
 
     private fun getAllAchievementsDefinitions(): List<AchievementEntity> {

@@ -30,7 +30,7 @@ class TopicRepositoryImpl @Inject constructor(
     override suspend fun seedTopics() {
         val existing = dao.getAllTopics()
         if (existing.isNotEmpty()) return
-        dao.insertTopics(allTopics.map { it.toEntity() })
+        dao.insertTopics(allTopics)
     }
 
     private val allTopics: List<TopicEntity>

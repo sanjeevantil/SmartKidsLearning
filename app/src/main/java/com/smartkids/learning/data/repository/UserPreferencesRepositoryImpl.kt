@@ -5,6 +5,7 @@ import com.smartkids.learning.domain.model.UserProfile
 import com.smartkids.learning.domain.repository.UserPreferencesRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -91,8 +92,7 @@ class UserPreferencesRepositoryImpl @Inject constructor(
 
     override suspend fun checkAndResetDailyStreak() {
         val today = dateFormat.format(Date())
-        val lastDate = dataStore.lastActiveDate
-        val last = lastDate ?: ""
+        val last = dataStore.lastActiveDate.first()
         when {
             last.isEmpty() -> {
                 dataStore.incrementStreak()
