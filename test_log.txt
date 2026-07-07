@@ -1,1 +1,170 @@
-Error: Unable to access jarfile /home/runner/work/SmartKidsLearning/SmartKidsLearning/gradle/wrapper/gradle-wrapper.jar
+
+Welcome to Gradle 8.9!
+
+Here are the highlights of this release:
+ - Enhanced Error and Warning Messages
+ - IDE Integration Improvements
+ - Daemon JVM Information
+
+For more details see https://docs.gradle.org/8.9/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebug
+> Task :app:processDebugManifestForPackage
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:processDebugResources
+> Task :app:kspDebugKotlin
+
+> Task :app:compileDebugKotlin
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/data/repository/DailyChallengeRepositoryImpl.kt:53:13 Condition is always 'true'.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/data/repository/UserPreferencesRepositoryImpl.kt:22:51 Type argument for reified type parameter 'T' was inferred to the intersection of ['kotlin.Comparable<*>' & 'java.io.Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/components/TopicCard.kt:173:39 'val Icons.Filled.EventNote: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.EventNote.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/components/TopicCard.kt:177:38 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/components/TopicCard.kt:180:47 'val Icons.Filled.ChromeReaderMode: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ChromeReaderMode.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:56:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:199:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:289:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:329:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:336:44 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:416:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:506:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:561:40 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:574:40 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:605:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:723:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:829:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ExtraGamesScreens.kt:930:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/GameSelectionScreen.kt:95:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/TimedChallenge/TimedChallengeScreen.kt:35:94 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/ballooonpop/BalloonPopScreen.kt:42:79 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/matching/MatchingGameScreen.kt:41:79 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/memory/MemoryGameScreen.kt:42:94 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/memory/MemoryGameScreen.kt:93:52 'val Icons.Filled.HelpOutline: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.HelpOutline.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/home/HomeScreen.kt:52:30 Type argument for type parameter 'VM' cannot be inferred because it has incompatible upper bounds: androidx.lifecycle.ViewModel, com.smartkids.learning.util.HapticFeedback (multiple incompatible classes). This will become an error in a future release.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/home/HomeScreen.kt:52:30 Type argument for reified type parameter 'VM' was inferred to the intersection of ['androidx.lifecycle.ViewModel' & 'com.smartkids.learning.util.HapticFeedback']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/home/HomeScreen.kt:163:45 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ABCLearningScreen.kt:30:134 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ABCLearningScreen.kt:53:40 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ABCLearningScreen.kt:59:40 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/AchievementsScreen.kt:25:146 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/AnimalLearningScreen.kt:26:141 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/AnimalLearningScreen.kt:47:221 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/AnimalLearningScreen.kt:49:240 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ColorLearningScreen.kt:26:140 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ColorLearningScreen.kt:43:221 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ColorLearningScreen.kt:45:240 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/FlashCardScreen.kt:24:188 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/FlashCardScreen.kt:47:235 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/FlashCardScreen.kt:49:249 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/NumberLearningScreen.kt:26:141 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/NumberLearningScreen.kt:45:221 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/NumberLearningScreen.kt:47:240 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ParentDashboardScreen.kt:25:150 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ParentDashboardScreen.kt:46:48 'val Icons.Filled.TrendingDown: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.TrendingDown.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ParentDashboardScreen.kt:58:48 'val Icons.Filled.TrendingUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.TrendingUp.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ParentPinScreen.kt:63:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/RewardsScreen.kt:28:157 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/SettingsScreen.kt:25:142 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/SettingsScreen.kt:29:121 'val Icons.Filled.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.VolumeUp.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ShapeLearningScreen.kt:25:140 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ShapeLearningScreen.kt:44:221 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ShapeLearningScreen.kt:46:240 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/profile/ProfileScreen.kt:32:141 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/quiz/QuizScreen.kt:56:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/topics/TopicListScreen.kt:36:44 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/tracing/TracingScreen.kt:40:155 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/tracing/TracingScreen.kt:72:242 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/tracing/TracingScreen.kt:73:267 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+
+> Task :app:compileDebugJavaWithJavac
+> Task :app:hiltAggregateDepsDebug
+> Task :app:hiltJavaCompileDebug
+> Task :app:processDebugJavaRes
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:transformDebugClassesWithAsm
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac
+> Task :app:hiltAggregateDepsDebugUnitTest
+> Task :app:hiltJavaCompileDebugUnitTest
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:transformDebugUnitTestClassesWithAsm
+
+> Task :app:testDebugUnitTest
+
+LearningProgressTest > progress percentage calculates correctly PASSED
+
+LearningProgressTest > progress percentage is zero when no items PASSED
+
+LearningProgressTest > accuracy is zero when no attempts PASSED
+
+LearningProgressTest > accuracy calculates correctly PASSED
+
+MainActivityTest STANDARD_OUT
+    WARNING: No manifest file found at ./AndroidManifest.xml.
+    Falling back to the Android OS resources only.
+    To remove this warning, annotate your test class with @Config(manifest=Config.NONE).
+    If you're using Android Gradle Plugin, add testOptions.unitTests.includeAndroidResources = true to your build.gradle
+
+MainActivityTest > launchMainActivity_doesNotCrash STANDARD_OUT
+    I/MultiDex: VM with version 17.0.19+10 has multidex support
+    I/MultiDex: Installing application
+    I/MultiDex: VM has multidex support, MultiDex support library is disabled.
+    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: PRE_ON_CREATE
+    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: CREATED
+    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: STARTED
+    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: RESUMED
+
+MainActivityTest > launchMainActivity_doesNotCrash PASSED
+
+QuizQuestionGeneratorSanityTest > string capitalization works FAILED
+    org.junit.ComparisonFailure: expected:<Hello [W]orld> but was:<Hello [w]orld>
+        at org.junit.Assert.assertEquals(Assert.java:117)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at com.smartkids.learning.QuizQuestionGeneratorSanityTest.string capitalization works(ExampleUnitTest.kt:83)
+
+QuizQuestionGeneratorSanityTest > multiplication is correct PASSED
+
+QuizQuestionGeneratorSanityTest > division is correct PASSED
+
+QuizQuestionGeneratorSanityTest > subtraction is correct PASSED
+
+QuizQuestionGeneratorSanityTest > addition is correct PASSED
+
+UserProfileTest > level calculation for 150 XP PASSED
+
+UserProfileTest > level calculation for 500 XP PASSED
+
+UserProfileTest > level calculation for 0 XP PASSED
+
+13 tests completed, 1 failed
+
+> Task :app:testDebugUnitTest FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2m 52s
+32 actionable tasks: 32 executed
