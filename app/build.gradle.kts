@@ -97,4 +97,11 @@ dependencies {
 tasks.withType<Test> {
     useJUnit()
     systemProperty("robolectric.logging", "stdout")
+    testLogging {
+        events("passed", "skipped", "failed", "standardOut", "standardError")
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+        showExceptions = true
+        showCauses = true
+        showStackTraces = true
+    }
 }

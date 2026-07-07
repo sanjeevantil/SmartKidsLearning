@@ -29,7 +29,7 @@ jobs:
 
     - name: Run Tests (Robolectric)
       run: |
-        ./gradlew testDebugUnitTest > test_log.txt 2>&1 || {
+        gradle testDebugUnitTest > test_log.txt 2>&1 || {
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add test_log.txt
@@ -40,7 +40,7 @@ jobs:
 
     - name: Build Debug APK
       run: |
-        ./gradlew assembleDebug > build_log.txt 2>&1 || {
+        gradle assembleDebug > build_log.txt 2>&1 || {
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add build_log.txt
