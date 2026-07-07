@@ -13,7 +13,7 @@ import org.robolectric.annotation.Config
 
 @HiltAndroidTest
 @RunWith(AndroidJUnit4::class)
-@Config(application = HiltTestApplication::class, sdk = [33])
+@Config(application = SmartKidsApp::class, sdk = [33])
 class MainActivityTest {
 
     @get:Rule

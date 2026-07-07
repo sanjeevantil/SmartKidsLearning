@@ -48,9 +48,10 @@ fun HomeScreen(
     onNavigateToColors: () -> Unit,
     onNavigateToAnimals: () -> Unit,
     onNavigateToFlashCards: (String) -> Unit,
-    onNavigateToTracing: () -> Unit,    // <-- ADD THIS LINE
-    haptic: HapticFeedback = hiltViewModel()
+    onNavigateToTracing: () -> Unit
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val haptic = remember { HapticFeedback(context) }
     val profile by viewModel.userProfile.collectAsState()
     val challenge by viewModel.todayChallenge.collectAsState()
     val featuredTopics by viewModel.featuredTopics.collectAsState()

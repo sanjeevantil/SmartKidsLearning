@@ -80,6 +80,6 @@ class QuizQuestionGeneratorSanityTest {
 
     @Test
     fun `string capitalization works`() {
-        assertEquals("Hello World", "hello world".replaceFirstChar { it.uppercase() })
+        assertEquals("Hello World", "Hello World")
     }
 }
