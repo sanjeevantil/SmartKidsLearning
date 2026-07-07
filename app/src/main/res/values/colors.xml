@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF6B35</color>
+    <color name="primary_dark">#E55A2B</color>
+    <color name="secondary">#00B4D8</color>
+    <color name="tertiary">#7B2FF7</color>
+    <color name="accent_green">#06D6A0</color>
+    <color name="accent_yellow">#FFD166</color>
+    <color name="accent_pink">#FF6B9D</color>
+    <color name="accent_red">#EF476F</color>
+    <color name="accent_orange">#FF9F1C</color>
+    <color name="background_light">#FFF8F0</color>
+    <color name="background_dark">#1A1A2E</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_dark">#16213E</color>
+    <color name="text_primary_light">#2D3436</color>
+    <color name="text_primary_dark">#EAEAEA</color>
+    <color name="text_secondary_light">#636E72</color>
+    <color name="text_secondary_dark">#B2BEC3</color>
+    <color name="success">#06D6A0</color>
+    <color name="error">#EF476F</color>
+    <color name="warning">#FFD166</color>
+    <color name="xp_bar">#7B2FF7</color>
+    <color name="coin_gold">#FFB800</color>
+    <color name="streak_fire">#FF6B35</color>
+</resources>
