@@ -55,9 +55,7 @@ w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/jav
 w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/matching/MatchingGameScreen.kt:41:79 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
 w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/memory/MemoryGameScreen.kt:42:94 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
 w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/games/memory/MemoryGameScreen.kt:93:52 'val Icons.Filled.HelpOutline: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.HelpOutline.
-w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/home/HomeScreen.kt:52:30 Type argument for type parameter 'VM' cannot be inferred because it has incompatible upper bounds: androidx.lifecycle.ViewModel, com.smartkids.learning.util.HapticFeedback (multiple incompatible classes). This will become an error in a future release.
-w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/home/HomeScreen.kt:52:30 Type argument for reified type parameter 'VM' was inferred to the intersection of ['androidx.lifecycle.ViewModel' & 'com.smartkids.learning.util.HapticFeedback']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
-w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/home/HomeScreen.kt:163:45 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
+w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/home/HomeScreen.kt:164:45 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
 w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ABCLearningScreen.kt:30:134 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
 w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ABCLearningScreen.kt:53:40 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
 w: file:///home/runner/work/SmartKidsLearning/SmartKidsLearning/app/src/main/java/com/smartkids/learning/ui/screens/learning/ABCLearningScreen.kt:59:40 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
@@ -122,22 +120,14 @@ MainActivityTest STANDARD_OUT
     To remove this warning, annotate your test class with @Config(manifest=Config.NONE).
     If you're using Android Gradle Plugin, add testOptions.unitTests.includeAndroidResources = true to your build.gradle
 
-MainActivityTest > launchMainActivity_doesNotCrash STANDARD_OUT
-    I/MultiDex: VM with version 17.0.19+10 has multidex support
-    I/MultiDex: Installing application
-    I/MultiDex: VM has multidex support, MultiDex support library is disabled.
-    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: PRE_ON_CREATE
-    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: CREATED
-    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: STARTED
-    D/LifecycleMonitor: Lifecycle status change: com.smartkids.learning.MainActivity@557fbd34 in: RESUMED
+MainActivityTest > launchMainActivity_doesNotCrash FAILED
+    java.lang.IllegalStateException: Hilt test, com.smartkids.learning.MainActivityTest, cannot use a @HiltAndroidApp application but found com.smartkids.learning.SmartKidsApp. To fix, configure the test to use HiltTestApplication or a custom Hilt test application generated with @CustomTestApplication.
+        at dagger.hilt.internal.Preconditions.checkState(Preconditions.java:83)
+        at dagger.hilt.android.internal.testing.MarkThatRulesRanRule.<init>(MarkThatRulesRanRule.java:63)
+        at dagger.hilt.android.testing.HiltAndroidRule.<init>(HiltAndroidRule.java:36)
+        at com.smartkids.learning.MainActivityTest.<init>(MainActivityTest.kt:20)
 
-MainActivityTest > launchMainActivity_doesNotCrash PASSED
-
-QuizQuestionGeneratorSanityTest > string capitalization works FAILED
-    org.junit.ComparisonFailure: expected:<Hello [W]orld> but was:<Hello [w]orld>
-        at org.junit.Assert.assertEquals(Assert.java:117)
-        at org.junit.Assert.assertEquals(Assert.java:146)
-        at com.smartkids.learning.QuizQuestionGeneratorSanityTest.string capitalization works(ExampleUnitTest.kt:83)
+QuizQuestionGeneratorSanityTest > string capitalization works PASSED
 
 QuizQuestionGeneratorSanityTest > multiplication is correct PASSED
 
@@ -166,5 +156,5 @@ Execution failed for task ':app:testDebugUnitTest'.
 * Try:
 > Run with --scan to get full insights.
 
-BUILD FAILED in 2m 52s
+BUILD FAILED in 2m 47s
 32 actionable tasks: 32 executed
