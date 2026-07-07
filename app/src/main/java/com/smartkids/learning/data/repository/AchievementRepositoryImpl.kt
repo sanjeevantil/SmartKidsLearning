@@ -6,6 +6,7 @@ import com.smartkids.learning.domain.model.Achievement
 import com.smartkids.learning.domain.repository.AchievementRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.firstOrNull
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -67,7 +68,7 @@ class AchievementRepositoryImpl @Inject constructor(
 
     override suspend fun seedAchievements() {
         val existing = dao.getAllAchievements()
-        if (kotlinx.coroutines.flow.firstOrNull(existing)?.isNotEmpty() == true) return
+        if (existing.firstOrNull()?.isNotEmpty() == true) return
         dao.insertAchievements(getAllAchievementsDefinitions())
     }
 
